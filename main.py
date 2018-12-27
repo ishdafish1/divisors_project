@@ -1,17 +1,27 @@
 def div(num):
     divisors = []
+    listOfIntegers = []
     sum = 0
+    
     for i in range(1, num+1):
-        if num % i == 0:
-            divisors.append(i)
-            sum += i
+        listOfIntegers.append(i)
+    
+    for integer in listOfIntegers:
+        if num % integer == 0:
+            divisors.append(integer)
+            sum += integer
+            del integer
+        else:
+            for otherInteger in listOfIntegers:
+                if otherInteger % integer == 0:
+                    del otherInteger
 # print('The divisors of your numbers are: ' + str(divisors))
 #  print('Sum of its divisors: ' + str(sum))
     return sum
 
 startPoint = 0 # number to begin testing from
 maxAttempts = 100000 # maximum number of attempts before program stops
-divisorSum = 2021 # the divisor sum you are searching for
+divisorSum = 2018 # the divisor sum you are searching for
 success = False # shows whether a number with a satisfactory divisor sum has been found
 
 attempts = 0
