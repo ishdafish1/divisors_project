@@ -8,4 +8,3 @@ def div(num):
   print('The divisors of your numbers are: ' + str(divisors))
   print('Sum of its divisors: ' + str(sum))
   
-div(2345347)
