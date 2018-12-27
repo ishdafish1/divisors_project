@@ -27,3 +27,10 @@ if success:
     print('The number ' + str(startPoint + attempts) + ' has a divisor sum of ' + str(divisorSum) + '.')
 else:
     print('Program exceeded maximum number of attempts, without success.')
+
+def div2(num):
+    divisors2 = []
+    x = 0
+    while x <= num:
+        x += 1
+        divisors2.append(x)
