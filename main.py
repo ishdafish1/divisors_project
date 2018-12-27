@@ -1,7 +1,7 @@
 def div(num):
     divisors = []
     sum = 0
-    for i in range(1, int(num/2)+1): # there will be no divisors beyond half the value of num
+    for i in range(1, num+1):
         if num % i == 0:
             divisors.append(i)
             sum += i
@@ -10,8 +10,8 @@ def div(num):
     return sum
 
 startPoint = 0 # number to begin testing from
-maxAttempts = 100 # maximum number of attempts before program stops
-divisorSum = 2018 # the divisor sum you are searching for
+maxAttempts = 100000 # maximum number of attempts before program stops
+divisorSum = 2021 # the divisor sum you are searching for
 success = False # shows whether a number with a satisfactory divisor sum has been found
 
 attempts = 0
