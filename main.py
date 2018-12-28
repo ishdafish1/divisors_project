@@ -31,6 +31,14 @@ else:
 def div2(num):
     divisors2 = []
     x = 0
-    while x <= num:
+    while x < num:
         x += 1
         divisors2.append(x)
+    
+    for x in divisors2:
+        if num % x == 0:
+            if num % i != 0:
+            divisors2 = divisors2[:i-1] + divisors2[i:] 
+            # ^^ not right yet, divisors2 being updated each time and with each iteration the new updated divisors2 is being updated rather than the original one.
+        
+           
