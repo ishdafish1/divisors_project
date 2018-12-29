@@ -39,11 +39,7 @@ else:
     print('Program exceeded maximum number of attempts, without success.')
 
 def div2(num):
-    divisors2 = []
-    x = 0
-    while x < num:
-        x += 1
-        divisors2.append(x)
+    divisors2 = [i+1 for i in range(num)] #makes list of natural numbers up to num
     
     for x in divisors2:
         if num % x == 0:
