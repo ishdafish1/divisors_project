@@ -1,10 +1,8 @@
 def div(num):
     divisors = []
-    listOfIntegers = []
     sum = 0
     
-    for i in range(1, num+1):
-        listOfIntegers.append(i)
+    listOfIntegers = [i+1 for i in range(num)]
     
     for integer in listOfIntegers:
         if num % integer == 0:
@@ -37,14 +35,3 @@ if success:
     print('The number ' + str(startPoint + attempts) + ' has a divisor sum of ' + str(divisorSum) + '.')
 else:
     print('Program exceeded maximum number of attempts, without success.')
-
-def div2(num):
-    divisors2 = [i+1 for i in range(num)] #makes list of natural numbers up to num
-    
-    for x in divisors2:
-        if num % x == 0:
-            if num % i != 0:
-            divisors2 = divisors2[:i-1] + divisors2[i:] 
-            # ^^ not right yet, divisors2 being updated each time and with each iteration the new updated divisors2 is being updated rather than the original one.
-        
-           
